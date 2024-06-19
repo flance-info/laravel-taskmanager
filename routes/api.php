@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\UserController; // Added UserController import
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,4 @@ Route::post( '/task', [ TaskController::class, 'store' ] );
 Route::get( '/task/{id}', [ TaskController::class, 'show' ] );
 Route::put( '/task/{id}', [ TaskController::class, 'update' ] );
 Route::delete( '/task/{id}', [ TaskController::class, 'destroy' ] );
+Route::post('/user', [UserController::class, 'store']); // This line was already correctly added as per your instructions
